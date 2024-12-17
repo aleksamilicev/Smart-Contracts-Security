@@ -4,7 +4,28 @@
 	},
 	"language": "Solidity",
 	"output": {
-		"abi": [],
+		"abi": [
+			{
+				"inputs": [],
+				"name": "deposit",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "number",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
 		"devdoc": {
 			"kind": "dev",
 			"methods": {},
@@ -33,11 +54,11 @@
 	},
 	"sources": {
 		"contracts/Withdrawal.sol": {
-			"keccak256": "0x02e72ffad7bd518232f2d5e47b2feb4ca6300b22112c62e22ac08c41115b58bd",
+			"keccak256": "0x722380b7037a360c68cc85a7405d216b3c70a507e5a276ad66afdfc6d77a0abf",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2c5178b9d15d5b97759e4109f6d799ee70a779474cb252d6411458120d8c5b13",
-				"dweb:/ipfs/QmYeMPTn2YgZc4TWy1Qh1ebCZ5qPxiRDvuj137uz9xbcMz"
+				"bzz-raw://cd1611579f5338ee8c954c53313e26e2992df4d887971c80991b577a327e8530",
+				"dweb:/ipfs/QmWmdfeoZYhSzMYUW7sPWWAUh99z3JRAYFSt5jnbWjTZbk"
 			]
 		}
 	},
