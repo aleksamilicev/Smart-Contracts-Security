@@ -7,7 +7,7 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "CheckBallance",
+				"name": "CheckBalance",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -29,7 +29,7 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "money",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
@@ -52,7 +52,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Withdrawal.sol": "Withdrawal"
+			"contracts/Withdrawal_SC01_Secure.sol": "Withdrawal"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -66,12 +66,20 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Withdrawal.sol": {
-			"keccak256": "0x5d453011f30fa84df5ab899bd2aef7ab466de1c47c81c9387967f17b532ebb37",
+		"@openzeppelin/contracts/security/ReentrancyGuard.sol": {
+			"keccak256": "0xa535a5df777d44e945dd24aa43a11e44b024140fc340ad0dfe42acf4002aade1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b9017cf53ab2d5542e344dacaed7716e3ce422742abc025d7dbe6acba3423fcc",
-				"dweb:/ipfs/QmdkeQUFwz9swU3BNaXcSrYZmjmXuNoeiwriJtLmdxMUH8"
+				"bzz-raw://41319e7f621f2dc3733511332c4fd032f8e32ad2aa7fd6f665c19741d9941a34",
+				"dweb:/ipfs/QmcYR3bd862GD1Bc7jwrU9bGxrhUu5na1oP964bDCu2id1"
+			]
+		},
+		"contracts/Withdrawal_SC01_Secure.sol": {
+			"keccak256": "0xae3d77746b32bea7337d9c4e6edfd6ac88378af60fb6088f300fae559d64714e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7a11053fac158d69e73c528133f309b42e6ac2e64e25f8891b6c1e7704bab3de",
+				"dweb:/ipfs/QmWQFaa9v9GVPeg4X6Dg8gDrspHfB8vURcRkZkPcVhdzeA"
 			]
 		}
 	},
