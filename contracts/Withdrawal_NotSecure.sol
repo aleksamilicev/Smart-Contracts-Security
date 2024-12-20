@@ -1,9 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.7.0 <0.9.0;
 
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
-
-contract Withdrawal is ReentrancyGuard {
+contract Withdrawal {
 
     function CheckBallance() public view returns(uint256) {
         return address(this).balance;   // prikazuje saldo ugovora u Wei

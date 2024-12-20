@@ -7,7 +7,7 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "CheckBallance",
+				"name": "CheckBalance",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -20,20 +20,34 @@
 			},
 			{
 				"inputs": [],
-				"name": "Deposit",
+				"name": "EnterLottery",
 				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "GetPlayers",
+				"outputs": [
 					{
-						"internalType": "uint256",
-						"name": "money",
-						"type": "uint256"
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
 					}
 				],
-				"name": "Withdraw",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "PickWinner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ResetLotteryWithRefund",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -52,7 +66,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Withdrawal_NotSecure.sol": "Withdrawal"
+			"contracts/LotoGame_NotSecure.sol": "LotoGame"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -66,12 +80,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Withdrawal_NotSecure.sol": {
-			"keccak256": "0x0a3f1039d0f8d7ebc3610e15fd362f58e3c0e7c35bb934cf2f79f67946663eda",
+		"contracts/LotoGame_NotSecure.sol": {
+			"keccak256": "0x8b7fd7fc761f8070e65990ee4d8fcfbf217f9882f5a9214840be810c93a1eb28",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://e0748d13391b5facbf3d8e97149f0f20434edf673726ad4dad5f7f5a646717ab",
-				"dweb:/ipfs/QmVH3d6KF1ivkKAe4RsWecRKuU8ZkYUj4eS3Ht7eypdgLm"
+				"bzz-raw://026e6ee1bf8a4d69fcf6cdeccd90fe997784d745700abe5eb4f69cee5c829e8d",
+				"dweb:/ipfs/QmS1crLgijnx8c9xx4B7ssRVeipuyAXbpuP3kyYn1FfT3C"
 			]
 		}
 	},
