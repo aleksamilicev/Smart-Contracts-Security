@@ -5,6 +5,7 @@ contract LotoGame {
     address[] private players; // Lista igrača
     mapping(address => bool) private hasEntered; // Mapa za praćenje unosa
     mapping(address => uint256) private deposits; // Mapa za praćenje uplaćenih sredstava
+    // deposits da bi osigurali ukoliko je doslo do nekog foul play-a da se korisnicima vrati ulog prilikom reseta
 
     function EnterLottery() public payable {
         require(msg.value > 0, "In order to play, the value must be greater than zero.");

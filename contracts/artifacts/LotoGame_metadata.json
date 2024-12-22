@@ -66,7 +66,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/LotoGame_NotSecure.sol": "LotoGame"
+			"contracts/LotoGame_SC08_Secure.sol": "LotoGame"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -80,12 +80,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/LotoGame_NotSecure.sol": {
-			"keccak256": "0x8b7fd7fc761f8070e65990ee4d8fcfbf217f9882f5a9214840be810c93a1eb28",
+		"contracts/LotoGame_SC08_Secure.sol": {
+			"keccak256": "0x554581e851726bec9f417491b6b148398bf2243a9d1f8115303429429c494a3e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://026e6ee1bf8a4d69fcf6cdeccd90fe997784d745700abe5eb4f69cee5c829e8d",
-				"dweb:/ipfs/QmS1crLgijnx8c9xx4B7ssRVeipuyAXbpuP3kyYn1FfT3C"
+				"bzz-raw://37e23e915c64b88f4a3f185c530102a47947c8a9cd9a8f384c33142cfc196460",
+				"dweb:/ipfs/QmUqG4xaj8Z526n5maNZVgGGL6KWeESwBy7WuYkLrTZBGA"
 			]
 		}
 	},
