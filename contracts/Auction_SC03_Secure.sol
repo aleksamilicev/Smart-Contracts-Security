@@ -10,13 +10,13 @@ contract Auction {
     address[] public bidders; // Lista svih učesnika
 
     constructor(uint256 biddingTimeInSeconds) {
-        uint256 randomSeed = uint256(keccak256(abi.encodePacked(blockhash(block.number - 1), block.timestamp, block.prevrandao)));
-        auctionEndTime = (randomSeed % 200) + block.timestamp + biddingTimeInSeconds;
+        uint256 randomSeed = uint256(keccak256(abi.encodePacked(blockhash(block.number - 1), block.number, block.prevrandao)));
+        auctionEndTime = (randomSeed % 200) + block.number + biddingTimeInSeconds;
         auctionEnded = false;
     }
 
     function PlaceBid() public payable {
-        require(block.timestamp <= auctionEndTime, "Auction has ended.");
+        require(block.number <= auctionEndTime, "Auction has ended.");
         require(msg.value > highestBid, "There already is a higher bid.");
 
         // Vraćamo prethodni bid, ako postoji
@@ -32,7 +32,7 @@ contract Auction {
     }
 
     function FinalizeAuction() public {
-        require(block.timestamp >= auctionEndTime, "Auction is still ongoing.");
+        require(block.number >= auctionEndTime, "Auction is still ongoing.");
         require(!auctionEnded, "Auction already finalized.");
 
         auctionEnded = true;
@@ -55,10 +55,10 @@ contract Auction {
     }
 
     function GetTimeLeft() public view returns (uint256) {
-        if (block.timestamp >= auctionEndTime) {
+        if (block.number >= auctionEndTime) {
             return 0;
         }
-        return auctionEndTime - block.timestamp;
+        return auctionEndTime - block.number;
     }
 
 
