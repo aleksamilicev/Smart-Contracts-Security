@@ -33,7 +33,10 @@ contract FundDistributor_BatchRefund {
             uint256 amount = balances[user];
             if (amount > 0) {
                 balances[user] = 0; // Označavamo da je korisnik refundiran, tj da su mu vraćena sredstva
-                payable(user).transfer(amount); // Vraća sredstva korisniku
+                (bool success, ) = user.call{value: amount}("");
+                    if (success) {
+                        balances[user] = 0;
+                    } // Vraća sredstva korisniku
             }
             currentIndex++;
             processed++;
