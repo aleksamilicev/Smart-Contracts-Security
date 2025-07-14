@@ -6,46 +6,103 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "biddingTimeInSeconds",
-						"type": "uint256"
-					}
-				],
+				"inputs": [],
 				"stateMutability": "nonpayable",
 				"type": "constructor"
 			},
 			{
-				"inputs": [],
-				"name": "FinalizeAuction",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "recipient",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "AddRecipient",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "GetTimeLeft",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "PlaceBid",
+				"name": "DepositFunds",
 				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "batchSize",
+						"type": "uint256"
+					}
+				],
+				"name": "DistributeDividends",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
-				"name": "auctionEndTime",
+				"name": "GetRecipients",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ResetProcessedIndex",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "batchSize",
+						"type": "uint256"
+					}
+				],
+				"name": "RetryFailedPayments",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "admin",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "dividends",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -57,8 +114,14 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "auctionEnded",
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "failedRecipients",
 				"outputs": [
 					{
 						"internalType": "bool",
@@ -70,6 +133,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "processedIndex",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -77,52 +153,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "bidders",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "bids",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "highestBid",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "highestBidder",
+				"name": "recipients",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -147,7 +178,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/Auction2_NotSecure.sol": "Auction"
+			"contracts/Dividend_SC06_Secire.sol": "DividendDistributor"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -161,12 +192,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/Auction2_NotSecure.sol": {
-			"keccak256": "0xf987590b35642b22980afc9edcb1e94b6f8c9c7e4654f9523eb0f7d7e8f842b7",
+		"contracts/Dividend_SC06_Secire.sol": {
+			"keccak256": "0x679d301655a28b60f4fade9d1e1e906de1da6a33cc3b540ad151375df5446078",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://89e5d6b7457e21940cf1e662a18898c1532548ba0a4bb50ab6ec11cbc2c2c8f6",
-				"dweb:/ipfs/QmRZ4mi7WLEbRbUVyRkB3Z7PECryrFSjLLaX7Yxwp6Q9PM"
+				"bzz-raw://7ed4ebecdf9b08a8fd2de161c856009195f2d61fa93fcfebb7b5618322afc17c",
+				"dweb:/ipfs/QmSHxPwZMEQmBNYPuZxjAQYsq7HuSjdadZYKHByFXp8NmL"
 			]
 		}
 	},
